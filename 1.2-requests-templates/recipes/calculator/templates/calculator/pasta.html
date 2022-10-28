@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Паста</title>
+</head>
+<body>
+<h3>Рецепт пасты на {{arg}} чел.</h3>
+{% for n, dish in ingridients.items %}
+    <p>{{ n }} : {{ dish }}</p>
+{% empty %}
+{% endfor %}
+<a href="{% url 'index' %}"><button> На главную </button></a>
+
+</body>
+</html>
