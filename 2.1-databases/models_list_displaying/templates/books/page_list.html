@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <div class="container">
+        <div class="header">
+        <h1><a href=" /">oбратно в каталог</a></h1>
+        </div>
+            <div class="row">
+                {% for e in page %}
+                <div class="book col-md-4">
+                    <h2>{{e.name}}</h2>
+                    <p>Автор: {{e.author}}</p>
+                    <p>Дата публикации: {{e.pub_date}}</p>
+                </div>
+                {% endfor %}
+            </div>
+        {% if page.has_previous %}
+        <a href="?page={{ page.previous_page_number }}">{{ prev_page }}</a>
+        {% else %}
+        <span>&nbsp;{{ prev_page }}</span>
+        {% endif %}
+        {% if page.has_next %}
+        <a href="?page={{ page.next_page_number }}">{{ next_page }}</a>
+        {% else %}
+        <span>&nbsp;{{ next_page }}</span>
+        {% endif %}
+    </div>
+</html>
