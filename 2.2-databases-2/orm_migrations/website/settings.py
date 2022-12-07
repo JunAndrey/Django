@@ -78,8 +78,7 @@ DATABASES = {
         'NAME': 'orm_migrations',
         'HOST': '127.0.0.1',
         'PORT': '5432',
-        "PASSWORD": 'Deti_990414',
-        "USER": 'postgres',
+       
     }
 }
 
