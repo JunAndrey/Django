@@ -23,10 +23,7 @@ class StockSerializer(serializers.ModelSerializer):
         model = Stock
         fields = ['id', 'address', 'positions']
 
-    # def validate(self, attrs):
-    #     if not attrs['positions'][0]:
-    #         raise ValidationError('Список пуст!')
-    #     return attrs
+  
 
     def create(self, validated_data):
         positions = validated_data.pop('positions')
